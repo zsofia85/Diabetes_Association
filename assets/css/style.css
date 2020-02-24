@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #C90000;
+    --dark: #404040;
+    --light: #707070;
+    --white: #ffffff;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.4;
+}
+h6 {
+    font-size: 1.2rem;
+}
+h5 {
+    font-size: 1.4rem;
+}
+h4 {
+    font-size: 1.6rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h1 {
+    font-size: 2.2rem;
+}
+
+button {
+    padding: 16px 24px;
+    background: var(--red);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    display: inline-block;
+}
+
+.red-background {
+    background-color: var(--red);
+}
+
+#disclaimer {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    height: 85%;
+    width: 95%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#disclaimer .title {
+    color: var(--red);
+}
+
+#disclaimer .description,
+#disclaimer .title {
+    text-align: center;
+}
+
+#disclaimer img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#disclaimer .diabetes_logo {
+    margin-bottom: 20px;
+}
+
+#disclaimer .actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
