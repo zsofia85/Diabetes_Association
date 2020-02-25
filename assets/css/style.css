@@ -62,6 +62,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--red);
 }
 
+ul {
+    list-style-type: none;
+}
+
 button {
     padding: 14px 32px;
     background: var(--red);
@@ -257,6 +261,42 @@ section:not(#disclaimer) {
 .guide p {
     width: 70%;
 }
+
+/* subcategories page */
+#productsSubCategories {
+    padding: 20px;
+}
+#productsSubCategoriesList .subcategory-name {
+    color: var(--dark);
+    margin: 20px 0;
+}
+
+#productsSubCategoriesList > li {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 24px;
+}
+
+#productsSubCategoriesList > li > img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+#productsSubCategoriesList .description {
+    margin: 10px 0;
+}
+
+#productsSubCategoriesList .limits li {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+}
+
+#productsSubCategoriesList .limits li .limit-type{
+    font-weight: bold;
+}
+
 /* INDIVIDUAL RECIPE */
 
 .individualRecipe {
