@@ -16,6 +16,7 @@ body {
     width: 100vw;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
+    padding: 16px;
 }
 
 p {
@@ -52,7 +53,7 @@ button {
     text-transform: uppercase;
     font-size: 1.2rem;
     color: white;
-    border-radius: 20px;
+    border-radius: 40px;
     border: 0;
     display: inline-block;
 }
@@ -97,7 +98,6 @@ button {
     display: flex;
     justify-content: space-around;
 }
-
 /* NAVIGATION */
 
 .nav_bar {
@@ -141,3 +141,4 @@ ul li a {
     padding-top: 50vh;
     margin: 0 30px;
 }
+
