@@ -1,28 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Diabetes Association_Shopping Assistant">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>Shopping Assistant</title>
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <script src="https://kit.fontawesome.com/cd84c3b3e6.js" crossorigin="anonymous"></script>
-        <script src="./assets/scripts/main.js" defer></script>
-    </head>
 
-    <body class="red-background">
-        <section id="disclaimer">
-            <img src="assets/images/Sundhedsstyrelsen.png" alt="Sundhedsstyrelsen logo" />
-            <img class="diabetes_logo" src="assets/images/Diabetes Foreningen.png" alt="diabetes foreningen logo" />
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Diabetes Association_Shopping Assistant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shopping Assistant</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/all.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/cd84c3b3e6.js" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/main.js" defer></script>
+</head>
 
-            <h1 class="title">Shopping Assistant</h1>
+<body class="red-background">
+    <section id="disclaimer">
+        <img src="assets/images/Sundhedsstyrelsen.png" alt="Sundhedsstyrelsen logo" />
+        <img class="diabetes_logo" src="assets/images/Diabetes Foreningen.png" alt="diabetes foreningen logo" />
 
-            <p class="description">This tool does not provide medical advice. The application is intended for informational purposes only. It is not intended for treatment or prevention of disease. By continuing you agree with the above.</p>
+        <h1 class="title">Shopping Assistant</h1>
 
-            <div class="actions">
-                <button>guest</button>
-                <button>log in</button>
-            </div>
-        </section>
-    </body>
+        <p class="description">This tool does not provide medical advice. The application is intended for informational
+            purposes only. It is not intended for treatment or prevention of disease. By continuing you agree with the
+            above.</p>
+
+        <div class="actions">
+            <button>guest</button>
+            <button>log in</button>
+        </div>
+    </section>
+
+
+    <!-- NAVIGATION STARTS HERE -->
+    <nav class="nav_bar">
+        <ul>
+            <li>
+                <div>
+                    <a class="nav_link" href="#">
+                        <i class="far fa-lemon fa-2x" id="products"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a class="nav_link" href="#">
+                        <i class="far fa-file fa-2x" id="recipe"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a class="nav_link" href="#">
+                        <i class="far fa-user fa-2x" id="user"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ADDITIONAL ALERT PAGE ABOUT RESPONSIVNESS -->
+    <section id="responsive">
+        <p>This web application is displayed only on smaller screens</p>
+    </section>
+
+
+    <!--Individual Recipe Section  -->
+    <section class="individual-recipe">
+        <img src="assets/images/Spaghetti.jpg" alt="spaghetti">
+        <i class="far fa-heart"></i>
+       
+        <h2>Spaghetti Italiana</h2>
+        <i class="fas fa-leaf"></i>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 package spaghetti</li>
+            <li>1 cup chopped onion</li>
+            <li>1/2 cup chopped celery</li>
+            <li>1 teaspoon garlic powder</li>
+            <li>3 tablespoon canola oil</li>
+            <li>1 jar meatless spaghetti sauce</li>
+            <li>1 can garbanzo beans</li>
+            <li>1 can diced tomatoes with garlic and onion</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1 teaspoon sugar</li>
+            <li>1/2 teaspoon dried oregano</li>
+            <li>1 bay leaf</li>
+            <li>1/4 cup grated Parmesan cheese</li>
+        </ul>
+
+        <a href="#">Add to shopping list</a>
+      
+        <h2>Steps</h2>
+
+        <ol>
+            <li>Cook spaghetti according to package directions. Meanwhile, in a larger skillet, 
+                saute the onion, celery, and garlic powder in oil until tender.
+            Add the spaghetti sauce, beans, tomatoes, sugar, salt, oregano and bay leaf.</li>
+            
+            <li>Bring to boil and simmer for 10 minutes. Discard bay leaf. Drain spaghetti; top with sauce and cheese.</li>
+        </ol>
+
+    </section>
+
+</body>
+
 </html>
