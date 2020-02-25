@@ -21,21 +21,27 @@ body {
 p {
     line-height: 1.4;
 }
+
 h6 {
     font-size: 1.2rem;
 }
+
 h5 {
     font-size: 1.4rem;
 }
+
 h4 {
     font-size: 1.6rem;
 }
+
 h3 {
     font-size: 1.8rem;
 }
+
 h2 {
     font-size: 2rem;
 }
+
 h1 {
     font-size: 2.2rem;
 }
@@ -60,7 +66,7 @@ button {
     margin: 20px auto;
     padding: 20px;
     height: 85%;
-    width: 95%;
+    width: 90%;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -72,8 +78,7 @@ button {
     color: var(--red);
 }
 
-#disclaimer .description,
-#disclaimer .title {
+#disclaimer .description, #disclaimer .title {
     text-align: center;
 }
 
@@ -91,4 +96,48 @@ button {
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+/* NAVIGATION */
+
+.nav_bar {
+    bottom: 0%;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    padding: 12px;
+    border-top: 1px solid grey;
+}
+
+ul li {
+    list-style-type: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Responsiveness alert page */
+
+#responsive {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--white);
+}
+
+#responsive p {
+    padding-top: 50vh;
+    margin: 0 30px;
 }
