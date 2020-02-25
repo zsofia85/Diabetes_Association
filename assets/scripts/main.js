@@ -1,6 +1,7 @@
 const productCategories = [
     {
         name: 'Sauces',
+        image: '/categories/bread.svg',
         products: [
             {
                 name: 'Dressing and sauces',
@@ -18,6 +19,7 @@ const productCategories = [
     },
     {
         name: 'Bread',
+        image: '/categories/bread.svg',
         products: [
             {
                 name: 'Ryebread and crisp bread',
@@ -47,6 +49,7 @@ const productCategories = [
     },
     {
         name: 'Dairy products',
+        image: '/categories/dairy.svg',
         products: [
             {
                 name: 'Milk',
@@ -100,6 +103,7 @@ const productCategories = [
     },
     {
         name: 'Drinks',
+        image: '/categories/soda.svg',
         products: [
             {
                 name: 'Juices',
@@ -141,6 +145,7 @@ const productCategories = [
     },
     {
         name: 'Meat',
+        image: '/categories/bread.svg',
         products: [
             {
                 name: 'Meat, poultry and plantbased products',
@@ -182,6 +187,7 @@ const productCategories = [
     },
     {
         name: 'Breakfast products',
+        image: '/categories/breakfast.svg',
         products: [
             {
                 name: 'Muesli and porage',
@@ -199,6 +205,7 @@ const productCategories = [
     },
     {
         name: 'Fruits and vegetables',
+        image: '/categories/fruits_and_vegetables.svg',
         products: [
             {
                 name: 'Potatoes and potato products',
@@ -227,6 +234,7 @@ const productCategories = [
     },
     {
         name: 'Ready to go',
+        image: '/categories/ready_to_go.svg',
         products: [
             {
                 name: 'Food to go',
@@ -256,7 +264,7 @@ const productCategories = [
     },
 ]
 
-const imgPath = './assets';
+const imgPath = 'assets/images';
 const body = document.getElementsByTagName('body')[0];
 const navigation = document.getElementById('nav');
 const disclaimerPage = document.getElementById('disclaimer');
@@ -277,10 +285,45 @@ function displayElements(elementsToShow, elementsToHide) {
 
 function openProductCategoryPage() {
     displayElements([productCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage])
+    renderProductCategories(productCategories);
 }
 
-function displayProductCategories(searchValue) {
-    console.log(searchValue);
+function renderProductCategories(productCategories) {
+    let productList = document.getElementById('productCategoriesList');
+    productList.innerHTML = '';
+
+    for(let p of productCategories) {
+        let listItem = document.createElement('li');
+        let itemImage = document.createElement('div');
+        let itemText = document.createElement('p');
+
+        itemImage.style.backgroundImage = `url('${imgPath}${p.image}')`;
+        itemImage.classList.add('product-group-image')
+
+        itemText.innerHTML = p.name;
+
+        listItem.classList.add('product-group');
+        listItem.appendChild(itemImage);
+        listItem.appendChild(itemText);
+
+        productList.appendChild(listItem);
+    }
+}
+
+function getProductCategories(searchValue) {
+    if (!searchValue || searchValue === '') {
+        renderProductCategories(productCategories);
+    } else {
+        let productsToRender = [];
+
+        for (let p of productCategories) {
+            if (p.name.toLowerCase().indexOf(searchValue) !== -1) {
+                productsToRender.push(p);
+            } 
+        }
+
+        renderProductCategories(productsToRender);
+    }
 }
 
 document.getElementById('guestButton').addEventListener('click', function() {
@@ -289,5 +332,11 @@ document.getElementById('guestButton').addEventListener('click', function() {
 });
 
 document.getElementById('searchField').addEventListener('input', function(e) {
-    displayProductCategories(e.target.value);
+    getProductCategories(e.target.value);
+});
+
+window.addEventListener('load', function() {
+    if(window.innerWidth > 425) {
+        body.classList.add('not-mobile');
+    }
 })
