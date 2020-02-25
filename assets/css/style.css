@@ -16,7 +16,6 @@ body {
     width: 100vw;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
-    padding: 16px;
 }
 
 p {
@@ -60,6 +59,10 @@ button {
 
 .red-background {
     background-color: var(--red);
+}
+
+.hidden {
+    display: none !important;
 }
 
 #disclaimer {
@@ -112,7 +115,7 @@ ul {
     flex-direction: row;
     background-color: var(--white);
     padding: 12px;
-    border-top: 1px solid grey;
+    border-top: 1px solid var(--light);
 }
 
 ul li {
@@ -124,7 +127,7 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: black;
+    color: var(--light);
     cursor: pointer;
 }
 
