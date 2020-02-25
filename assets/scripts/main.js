@@ -1,11 +1,10 @@
-console.log('hi');
-
 const productCategories = [
     {
         name: 'Sauces',
         products: [
             {
                 name: 'Dressing and sauces',
+                image: '/subcategories/dressings.jpg',
                 limits: [
                     {
                         description: 'Suggested values per 100g',
@@ -22,6 +21,7 @@ const productCategories = [
         products: [
             {
                 name: 'Ryebread and crisp bread',
+                image: '/subcategories/ryebread.jpg',
                 limits: [
                     {
                         description: 'Suggested values per 100g',
@@ -33,6 +33,7 @@ const productCategories = [
             },
             {
                 name: 'Wholegrain bread and buns',
+                image: '/subcategories/whole-grain.jpg',
                 limits: [
                     {
                         description: 'Suggested values per 100g',
@@ -49,6 +50,7 @@ const productCategories = [
         products: [
             {
                 name: 'Milk',
+                image: '/subcategories/milk.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -60,6 +62,7 @@ const productCategories = [
             },
             {
                 name: 'Cheese',
+                image: '/subcategories/cheese.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -71,6 +74,7 @@ const productCategories = [
             },
             {
                 name: 'Soured dairy products',
+                image: '/subcategories/soured-milk.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -82,6 +86,7 @@ const productCategories = [
             },
             {
                 name: 'Chocolate milk and milk drinks',
+                image: '/subcategories/chocolate-drink.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -98,6 +103,7 @@ const productCategories = [
         products: [
             {
                 name: 'Juices',
+                image: '/subcategories/juices.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -109,6 +115,7 @@ const productCategories = [
             },
             {
                 name: 'Soda and soft drinks',
+                image: '/subcategories/soda-and-soft-drink.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -120,6 +127,7 @@ const productCategories = [
             },
             {
                 name: 'Chocolate milk and milk drinks',
+                image: '/subcategories/chocolate-drink',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -136,6 +144,7 @@ const productCategories = [
         products: [
             {
                 name: 'Meat, poultry and plantbased products',
+                image: '/subcategories/meat.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -147,6 +156,7 @@ const productCategories = [
             },
             {
                 name: 'Fish and sea food',
+                image: '/subcategories/fish.jpg',
                 limits: [
                     {
                         description: 'Suggested values: fresh, frozen, preserved or fish toppings',
@@ -158,6 +168,7 @@ const productCategories = [
             },
             {
                 name: 'Toppings',
+                image: '/subcategories/toppings.jpg',
                 limits: [
                     {
                         description: 'Suggested values',
@@ -174,6 +185,7 @@ const productCategories = [
         products: [
             {
                 name: 'Muesli and porage',
+                image: '/subcategories/muesli.jpg',
                 limits: [
                     {
                         description: 'Suggested values per 100g',
@@ -190,6 +202,7 @@ const productCategories = [
         products: [
             {
                 name: 'Potatoes and potato products',
+                image: '/subcategories/potatoes.jpg',
                 limits: [
                     {
                         description: 'Suggested values per 100g',
@@ -217,6 +230,7 @@ const productCategories = [
         products: [
             {
                 name: 'Food to go',
+                image: '/subcategories/food-to-go.jpg',
                 limits: [
                     {
                         description: 'Suggested values per 100g',
@@ -228,6 +242,7 @@ const productCategories = [
             },
             {
                 name: 'Ready made dinner',
+                image: '/subcategories/ready-made-dinner.jpg',
                 limits: [
                     {
                         description: 'Suggested values per 100g',
@@ -240,3 +255,39 @@ const productCategories = [
         ]
     },
 ]
+
+const imgPath = './assets';
+const body = document.getElementsByTagName('body')[0];
+const navigation = document.getElementById('nav');
+const disclaimerPage = document.getElementById('disclaimer');
+const responsivePage = document.getElementById('responsive');
+const individualRecipePage = document.getElementById('individualRecipe');
+const productCategoriesPage = document.getElementById('productCategories');
+
+
+function displayElements(elementsToShow, elementsToHide) {
+    for (let e of elementsToShow) {
+        e.classList.remove('hidden');
+    }
+
+    for (let e of elementsToHide) {
+        e.classList.add('hidden');
+    }
+}
+
+function openProductCategoryPage() {
+    displayElements([productCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage])
+}
+
+function displayProductCategories(searchValue) {
+    console.log(searchValue);
+}
+
+document.getElementById('guestButton').addEventListener('click', function() {
+    openProductCategoryPage();
+    body.classList.remove('red-background', 'padding-top');
+});
+
+document.getElementById('searchField').addEventListener('input', function(e) {
+    displayProductCategories(e.target.value);
+})

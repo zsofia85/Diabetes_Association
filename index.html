@@ -12,7 +12,7 @@
     <script src="./assets/scripts/main.js" defer></script>
 </head>
 
-<body class="red-background">
+<body class="red-background padding-top">
     <section id="disclaimer">
         <img src="assets/images/Sundhedsstyrelsen.png" alt="Sundhedsstyrelsen logo" />
         <img class="diabetes_logo" src="assets/images/Diabetes Foreningen.png" alt="diabetes foreningen logo" />
@@ -24,32 +24,32 @@
             above.</p>
 
         <div class="actions">
-            <button>guest</button>
-            <button>log in</button>
+            <button id="guestButton">guest</button>
+            <button class="disabled">log in</button>
         </div>
     </section>
 
 
     <!-- NAVIGATION STARTS HERE -->
-    <nav class="nav_bar hidden">
+    <nav id="nav" class="nav-bar hidden">
         <ul>
             <li>
                 <div>
-                    <a class="nav_link" href="#">
+                    <a class="nav-link" href="#">
                         <i class="far fa-lemon fa-2x" id="products"></i>
                     </a>
                 </div>
             </li>
             <li>
                 <div>
-                    <a class="nav_link" href="#">
+                    <a class="nav-link" href="#">
                         <i class="far fa-file fa-2x" id="recipe"></i>
                     </a>
                 </div>
             </li>
             <li>
                 <div>
-                    <a class="nav_link" href="#">
+                    <a class="nav-link" href="#">
                         <i class="far fa-user fa-2x" id="user"></i>
                     </a>
                 </div>
@@ -64,7 +64,7 @@
 
 
     <!--Individual Recipe Section  -->
-    <section class="individual-recipe hidden">
+    <section id="individualRecipe" class="individual-recipe hidden">
         <img src="assets/images/Spaghetti.jpg" alt="spaghetti">
         <i class="far fa-heart"></i>
        
@@ -102,6 +102,24 @@
 
     </section>
 
-</body>
+    <!-- PRODUCT GATEGORIES PAGE  -->
+    <section id="productCategories" class="hidden">
+        <section id="guideIcons">
+            <h6>Icons to guide you</h6>
+            <div class="guide">
+                <img src="./assets/images/green_logo.png" alt="green icon guide"/>
+                <p>With the keyhole icon you can find products that contain less fat, sugar and salt, more fibers and whole grain. </p>
+            </div>
 
+            <div class="guide">
+                <img src="./assets/images/orange_logo.png" alt="orange icon guide"/>
+                <p>With the Wholegrain logo you can find products that contain plenty of wholegrain, less fat, sugar, salt and more fibers.</p>
+            </div>
+        </section>
+        <input id="searchField" type="text" placeholder="Search"/>
+        <ul id="productCategoriesList">
+
+        </ul>
+    </section>
+</body>
 </html>
