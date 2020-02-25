@@ -310,14 +310,28 @@ function renderProductCategories(productCategories) {
     }
 }
 
+function isSearchValueInSubCategory(searchValue, products) {
+    let found = false;
+
+    for (let p of products) {
+        if (p.name.toLowerCase().indexOf(searchValue) !== -1 ) {
+            found = true;
+            break;
+        } 
+    }
+
+    return found
+}
+
 function getProductCategories(searchValue) {
     if (!searchValue || searchValue === '') {
         renderProductCategories(productCategories);
     } else {
         let productsToRender = [];
+        searchValue = searchValue.toLowerCase();
 
         for (let p of productCategories) {
-            if (p.name.toLowerCase().indexOf(searchValue) !== -1) {
+            if (p.name.toLowerCase().indexOf(searchValue) !== -1 || isSearchValueInSubCategory(searchValue, p.products)) {
                 productsToRender.push(p);
             } 
         }

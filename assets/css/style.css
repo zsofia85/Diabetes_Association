@@ -199,6 +199,7 @@ section:not(#disclaimer) {
     justify-content: space-around;
     font-weight: 600;
     font-size: 1.1rem;
+    border: 1px solid var(--gray);
 }
 
 .product-group .product-group-image {
