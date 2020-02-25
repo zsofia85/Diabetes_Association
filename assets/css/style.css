@@ -16,7 +16,6 @@ body {
     width: 100vw;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
-    padding: 16px;
 }
 
 p {
@@ -60,6 +59,10 @@ button {
 
 .red-background {
     background-color: var(--red);
+}
+
+.hidden {
+    display: none !important;
 }
 
 #disclaimer {
