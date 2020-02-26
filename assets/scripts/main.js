@@ -1,7 +1,7 @@
 const productCategories = [
     {
         name: 'Sauces',
-        image: '/categories/bread.svg',
+        image: '/categories/sauces.svg',
         products: [
             {
                 name: 'Dressing and sauces',
@@ -114,7 +114,7 @@ const productCategories = [
             },
             {
                 name: 'Chocolate milk and milk drinks',
-                image: '/subcategories/chocolate-drink',
+                image: '/subcategories/chocolate-drink.jpg',
                 limits: {
                     description: 'Suggested values',
                     sugar: 'max 4% added sugar OR max  8g/100ml',
@@ -250,14 +250,26 @@ function displayElements(elementsToShow, elementsToHide) {
     }
 }
 
+function changeBackgroundToGray() {
+    body.classList.remove('red-background');
+    body.classList.add('gray-background');
+}
+
+function removeBackgroundColor() {
+    body.classList.remove('red-background');
+    body.classList.remove('gray-background');
+}
+
 function openProductCategoryPage() {
     displayElements([productCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage])
     renderProductCategories(productCategories);
+    changeBackgroundToGray();
 }
 
 function openSubCategoryPage(productCategory) {
     displayElements([productsSubCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage, productCategoriesPage]);
     renderProductSubCategories(productCategory);
+    removeBackgroundColor();
 }
 
 function renderProductCategories(productCategories) {
@@ -310,11 +322,31 @@ function renderProductSubCategories(productCategory) {
         let subCategoryLimitsElem = document.createElement('ul');
         subCategoryLimitsElem.classList.add('limits')
 
+        let limits = Object.keys(p.limits);
+
+        for (let l of limits) {
+            if  (p.limits[l] && l !== 'description') {
+                let limitListItem = document.createElement('li');
+                let typeSpan = document.createElement('span');
+                let valueSpan = document.createElement('span');
+                
+                typeSpan.classList.add('limit-type');
+                typeSpan.innerHTML = l;
+
+                valueSpan.classList.add('limit-value');
+                valueSpan.innerHTML = p.limits[l];
+
+                limitListItem.appendChild(typeSpan);
+                limitListItem.appendChild(valueSpan);
+
+                subCategoryLimitsElem.appendChild(limitListItem);
+            }
+        }
+
         listItem.appendChild(subCategoryNameElem);
         listItem.appendChild(subcategoryImageElem);
         listItem.appendChild(subCategoryDescElem);
-
-        // ITERATE THROUGH LIMITS
+        listItem.appendChild(subCategoryLimitsElem);
 
         list.appendChild(listItem);
     }
