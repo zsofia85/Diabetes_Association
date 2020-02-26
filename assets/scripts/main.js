@@ -233,12 +233,15 @@ const productCategories = [
 const imgPath = 'assets/images';
 const body = document.getElementsByTagName('body')[0];
 const navigation = document.getElementById('nav');
+const productsIcon = document.getElementById('products');
+const recipesIcon = document.getElementById('recipe');
+const profileIcon = document.getElementById('profile');
 const disclaimerPage = document.getElementById('disclaimer');
 const responsivePage = document.getElementById('responsive');
 const individualRecipePage = document.getElementById('individualRecipe');
 const productCategoriesPage = document.getElementById('productCategories');
 const productsSubCategoriesPage = document.getElementById('productsSubCategories');
-
+const searchField = document.getElementById('searchField');
 
 function displayElements(elementsToShow, elementsToHide) {
     for (let e of elementsToShow) {
@@ -261,9 +264,10 @@ function removeBackgroundColor() {
 }
 
 function openProductCategoryPage() {
-    displayElements([productCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage])
+    displayElements([productCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage, productsSubCategoriesPage])
     renderProductCategories(productCategories);
     changeBackgroundToGray();
+    searchField.value = '';
 }
 
 function openSubCategoryPage(productCategory) {
@@ -387,12 +391,24 @@ document.getElementById('guestButton').addEventListener('click', function() {
     body.classList.remove('red-background', 'padding-top');
 });
 
-document.getElementById('searchField').addEventListener('input', function(e) {
+searchField.addEventListener('input', function(e) {
     getProductCategories(e.target.value);
 });
+
+productsIcon.addEventListener('click', function() {
+    openProductCategoryPage();
+});
+
+recipesIcon.addEventListener('click', function() {
+    
+});
+
+// profileIcon.addEventListener('click', function() {
+    
+// })
 
 window.addEventListener('load', function() {
     if(window.innerWidth > 425) {
         body.classList.add('not-mobile');
     }
-})
+});
