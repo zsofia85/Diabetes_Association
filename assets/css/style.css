@@ -115,8 +115,20 @@ section:not(#disclaimer) {
     align-items: center;
 }
 
+#disclaimer .logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#disclaimer .logos img {
+    width: 40%;
+    height: auto;
+}
+
 #disclaimer .title {
     color: var(--red);
+    margin-bottom: 50px;
 }
 
 #disclaimer .description, #disclaimer .title {
@@ -129,8 +141,14 @@ section:not(#disclaimer) {
     margin: 0 auto;
 }
 
-#disclaimer .diabetes_logo {
-    margin-bottom: 20px;
+#disclaimer .association_logo {
+    width: 50%;
+    margin-top: 20px;
+}
+
+#disclaimer .authority_logo {
+    width: 50%;
+    margin-top: -30px;
 }
 
 #disclaimer .actions {
