@@ -108,7 +108,7 @@ button.disabled {
 
 section:not(#disclaimer) {
     margin-bottom: 60px;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 }
 
 #disclaimer {
