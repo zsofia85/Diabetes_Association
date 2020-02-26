@@ -7,19 +7,19 @@
 :root {
     --red: #C90000;
     --dark: #404040;
-    --light: #707070;
+    --gray: #707070;
     --white: #ffffff;
-    --gray: #cacaca;
+    --light: #ececec;
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
     height: 100vh;
     width: 100vw;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Titillium Web', Helvetica, sans-serif;
 }
 
 body.not-mobile #responsive {
@@ -70,7 +70,7 @@ button {
     padding: 14px 32px;
     background: var(--red);
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: white;
     border-radius: 40px;
     border: 0;
@@ -78,12 +78,16 @@ button {
 }
 
 button.disabled {
-    background: var(--light);
+    background: var(--gray);
     pointer-events: none;
 }
 
 .red-background {
     background-color: var(--red);
+}
+
+.gray-background {
+    background-color: var(--light);
 }
 
 .padding-top {
@@ -111,8 +115,20 @@ section:not(#disclaimer) {
     align-items: center;
 }
 
+#disclaimer .logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#disclaimer .logos img {
+    width: 40%;
+    height: auto;
+}
+
 #disclaimer .title {
     color: var(--red);
+    margin-bottom: 50px;
 }
 
 #disclaimer .description, #disclaimer .title {
@@ -125,8 +141,14 @@ section:not(#disclaimer) {
     margin: 0 auto;
 }
 
-#disclaimer .diabetes_logo {
-    margin-bottom: 20px;
+#disclaimer .association_logo {
+    width: 50%;
+    margin-top: 20px;
+}
+
+#disclaimer .authority_logo {
+    width: 50%;
+    margin-top: -30px;
 }
 
 #disclaimer .actions {
@@ -158,6 +180,30 @@ section:not(#disclaimer) {
     display: block;
     margin: 0 auto;
     text-align: center;
+    width: 33.3%;
+    height: 40px;
+}
+
+.nav-bar li {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-bar li.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.nav-bar #products {
+    background-image: url('../images/navigation/products3.svg');
+}
+
+.nav-bar #recipe {
+    background-image: url('../images/navigation/recipes2.svg');
+}
+
+.nav-bar #profile {
+    background-image: url('../images/navigation/profile.svg');
 }
 
 /* Responsiveness alert page */
@@ -178,7 +224,7 @@ section:not(#disclaimer) {
 
 /* product categories page */
 #productCategories {
-    padding-top: 240px;
+    padding-top: 260px;
 }
 
 #productCategoriesList {
@@ -203,7 +249,8 @@ section:not(#disclaimer) {
     justify-content: space-around;
     font-weight: 600;
     font-size: 1.1rem;
-    border: 1px solid var(--gray);
+    border: 1px solid #d8d8d8;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.3);
 }
 
 .product-group .product-group-image {
@@ -216,7 +263,7 @@ section:not(#disclaimer) {
 #searchField {
     font-size: 1.4rem;
     border-radius: 40px;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--light);
     padding: 6px 20px;
     width: calc(100% - 40px);
     margin: 10px auto;
@@ -226,7 +273,7 @@ section:not(#disclaimer) {
 
 #searchField:focus {
     outline: 0;
-    border-color: var(--light)
+    border-color: var(--gray)
 }
 
 #guideIcons {
@@ -234,12 +281,12 @@ section:not(#disclaimer) {
     position: fixed;
     top: 0;
     z-index: -1;
-    background: var(--gray);
+    background: white;
 }
 
 #searchProducts {
-    background: white;
-    padding-top: 20px;
+    background: var(--light);
+    padding: 20px 0;
 }
 
 .guide {
@@ -302,7 +349,7 @@ section:not(#disclaimer) {
 .individualRecipe {
     width: 100vw;
     background-color: var(--white);
-    color: var(--light);
+    color: var(--gray);
 }
 
 .recipe_banner {

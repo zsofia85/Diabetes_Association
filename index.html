@@ -6,6 +6,7 @@
     <meta name="description" content="Diabetes Association_Shopping Assistant">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Shopping Assistant</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="assets/css/all.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/cd84c3b3e6.js" crossorigin="anonymous"></script>
@@ -16,23 +17,17 @@
     <!-- NAVIGATION STARTS HERE -->
     <nav id="nav" class="nav-bar">
         <ul>
-            <li id="products">
-                <i class="far fa-lemon fa-2x"></i>
-            </li>
-            <li id="recipe">
-                <i class="far fa-file fa-2x" ></i>
-            </li>
-            <li id="profile">
-                <i class="far fa-user fa-2x"></i>
-            </li>
+            <li id="products"></li>
+            <li id="recipe"></li>
+            <li id="profile"></li>
         </ul>
     </nav>
 
     <!-- DISCLAIMER PAGE -->
-    <section id="disclaimer" class="hidden">
-        <img src="assets/images/Sundhedsstyrelsen.png" alt="Sundhedsstyrelsen logo" />
-        <img class="diabetes_logo" src="assets/images/Diabetes Foreningen.png" alt="diabetes foreningen logo" />
-
+    <section id="disclaimer">
+        <img class="association_logo" src="assets/images/logos/association_logo_int.jpg" alt="diabetes foreningen logo" />
+        <img class="authority_logo" src="assets/images/logos/danish_authority_int_black.png" alt="Sundhedsstyrelsen logo" />
+        
         <h1 class="title">Shopping Assistant</h1>
 
         <p class="description">This tool does not provide medical advice. The application is intended for informational
@@ -100,12 +95,12 @@
         <div id="guideIcons">
             <h6>Icons to guide you</h6>
             <div class="guide">
-                <img src="./assets/images/green_logo.png" alt="green icon guide"/>
+                <img src="./assets/images/logos/green_logo.png" alt="green icon guide"/>
                 <p>With the keyhole icon you can find products that contain less fat, sugar and salt, more fibers and whole grain. </p>
             </div>
 
             <div class="guide">
-                <img src="./assets/images/orange_logo.png" alt="orange icon guide"/>
+                <img src="./assets/images/logos/orange_logo.png" alt="orange icon guide"/>
                 <p>With the Wholegrain logo you can find products that contain plenty of wholegrain, less fat, sugar, salt and more fibers.</p>
             </div>
         </div>
@@ -119,19 +114,7 @@
     <!-- PRODUCT SUBCATEGORIES PAGE -->
     <section id="productsSubCategories" class="hidden">
         <h4 id="subCategoryName" class="product-category-name">Bread</h4>
-        <ul id="productsSubCategoriesList">
-           <!-- <li>
-               <h6 class="subcategory-name">Ryebread and crisp bread</h6>
-               <img src="assets/images/subcategories/fish.jpg">
-               <p class="description">Suggested values per 100g</p>
-               <ul class="limits">
-                   <li>
-                       <span class="limit-type">fat</span>
-                       <span class="limit-value">max 10%</span>
-                   </li>
-               </ul>
-           </li>  -->
-        </ul>
+        <ul id="productsSubCategoriesList"></ul>
     </section>
 
         <!-- RECIPE LIST -->
