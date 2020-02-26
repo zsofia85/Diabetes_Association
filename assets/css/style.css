@@ -306,12 +306,12 @@ section:not(#disclaimer) {
 }
 
 .recipe_banner {
-    width: 100%;
     position: relative;
 }
 
 .recipe_banner img {
     display: block;
+    max-width: 100%;
 }
 
 .recipe_banner i {
@@ -321,6 +321,7 @@ section:not(#disclaimer) {
     top: 3%;
     border: 1px solid white;
     background-color: var(--white);
+    opacity: 0.6;
     padding: 3vw;
     border-radius: 50%;
 }
@@ -388,4 +389,139 @@ section:not(#disclaimer) {
 .steps ol li {
     padding-bottom: 2vh;
     line-height: 1.5;
+}
+
+/* RECIPES STYLING */
+
+.recipes-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipes-type li {
+    list-style-type: none;
+    padding: 10px 10px;
+    font-size: 25px;
+    color: var(--white);
+    margin: 10px 0;
+}
+
+
+.active{
+    border-bottom: 2px solid;
+}
+
+.recipe {
+    width: 100%;
+    height: auto;
+}
+
+.recipe_name {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 4vh 8vw;
+}
+
+.details-wrapper ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.recipe_icons {
+    text-align: center;
+}
+
+.recipe_icons i {
+    border: 1px solid var(--light);
+    padding: 5vw;
+    border-radius: 200px;
+}
+
+.recipe_icons p {
+    padding-top: 1vh;
+}
+
+.recipe_name h2 {
+    color: var(--red);
+    padding-right: 4vw;
+    margin-top: 3vh;
+    font-size: 1.8rem;
+}
+
+.recipe_name i {
+    padding-top: 4vh;
+}
+
+
+.recipes a{
+    margin: 10vw 0 10vw 10vw;
+    display: block;
+    color: var(--red);
+}
+
+
+/* POP-UP STYLING */
+.pop-up{
+    background: white;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--red);
+}
+
+.pop-up button {
+    margin-top: 15vh;
+}
+
+.pop-up h4 {
+    padding-top: 5vh;
+}
+
+/* FORM STYLING */
+.form{
+    background: white;
+    padding: 0 10vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.form h4 {
+    padding-top: 15vh;
+    padding-bottom: 3vh;
+}
+
+.form h6 {
+    padding-top: 4vh;
+}
+
+.form button {
+    margin-top: 15vh;
+}
+
+input {
+    letter-spacing: 2px;
+    font-size: 18px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #404040;
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin:10px auto;
+}
+
+.close {
+    position: absolute;
+    color: var(--light);
+    right: 2%;
+    background-color: var(--white);
+    opacity: 0.6;
+    padding: 3vw;
+
 }

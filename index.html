@@ -14,7 +14,7 @@
 
 <body class="red-background padding-top">
     <!-- NAVIGATION STARTS HERE -->
-    <nav id="nav" class="nav-bar hidden">
+    <nav id="nav" class="nav-bar">
         <ul>
             <li id="products">
                 <i class="far fa-lemon fa-2x"></i>
@@ -29,7 +29,7 @@
     </nav>
 
     <!-- DISCLAIMER PAGE -->
-    <section id="disclaimer">
+    <section id="disclaimer" class="hidden">
         <img src="assets/images/Sundhedsstyrelsen.png" alt="Sundhedsstyrelsen logo" />
         <img class="diabetes_logo" src="assets/images/Diabetes Foreningen.png" alt="diabetes foreningen logo" />
 
@@ -51,7 +51,7 @@
     </section>
 
     <!--Individual Recipe Section  -->
-    <section id="individualRecipe" class="hidden">
+    <section id="individualRecipe" class="">
         <div class="recipe_banner">
             <img src="assets/images/Spaghetti.jpg" alt="spaghetti">
             <i class="far fa-heart fa-2x"></i>
@@ -133,5 +133,166 @@
            </li>  -->
         </ul>
     </section>
+
+        <!-- RECIPE LIST -->
+        <section class="recipes">
+
+            <ul class="recipes-type red-background">
+                <li>Breakfast</li>
+                <li class="active">Lunch</li>
+                <li>Dinner</li>
+            </ul>
+    
+            <div class="recipe_banner">
+                <img class="recipe" src="assets/images/spaghetti.jpg" alt="recipe1" />
+                <i class="far fa-heart fa-2x"></i>
+            </div>
+            <div class="recipe_name">
+                <h2>Spaghetti Italiana</h2>
+                <i class="fas fa-leaf"></i>
+            </div>
+    
+            <div class="details-wrapper">
+                <ul>
+                    <li class="recipe_icons">
+                        <i class="fas fa-clock fa-1x"></i>
+                        <p>25 minutes</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-shopping-basket fa-1x"></i>
+                        <p>13 ingredients</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-utensils fa-1x"></i>
+                        <p>6 persons</p>
+                    </li>
+                </ul>
+            </div>
+    
+            <a>Read more ></a>
+    
+            <div class="recipe_banner">
+                <img class="recipe" src="assets/images/afghansalad.jpg" alt="recipe1" />
+                <i class="far fa-heart fa-2x"></i>
+            </div>
+            <div class="recipe_name">
+                <h2>Afghan Salad</h2>
+            </div>
+    
+            <div class="details-wrapper">
+                <ul>
+                    <li class="recipe_icons">
+                        <i class="fas fa-clock fa-1x"></i>
+                        <p>15 minutes</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-shopping-basket fa-1x"></i>
+                        <p>9 ingredients</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-utensils fa-1x"></i>
+                        <p>4 persons</p>
+                    </li>
+                </ul>
+            </div>
+    
+            <a>Read more ></a>
+    
+            <div class="recipe_banner">
+                <img class="recipe" src="assets/images/muselismoothie.jpg" alt="recipe1" />
+                <i class="far fa-heart fa-2x"></i>
+            </div>
+            <div class="recipe_name">
+                <h2>Muesli smoothie</h2>
+            </div>
+            <div class="details-wrapper">
+                <ul>
+                    <li class="recipe_icons">
+                        <i class="fas fa-clock fa-1x"></i>
+                        <p>5 minutes</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-shopping-basket fa-1x"></i>
+                        <p>4 ingredients</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-utensils fa-1x"></i>
+                        <p>1 person</p>
+                    </li>
+                </ul>
+            </div>
+    
+            <a>Read more ></a>
+    
+            <div class="recipe_banner">
+                <img class="recipe" src="assets/images/asiansalmon.jpg" alt="recipe1" />
+                <i class="far fa-heart fa-2x"></i>
+            </div>
+    
+            <div class="recipe_name">
+                <h2>Asian salmon fillets</h2>
+            </div>
+            <div class="details-wrapper">
+                <ul>
+                    <li class="recipe_icons">
+                        <i class="fas fa-clock fa-1x"></i>
+                        <p>18 minutes</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-shopping-basket fa-1x"></i>
+                        <p>8 ingredients</p>
+                    </li>
+                    <li class="recipe_icons">
+                        <i class="fas fa-utensils fa-1x"></i>
+                        <p>6 persons</p>
+                    </li>
+                </ul>
+            </div>
+    
+            <a>Read more ></a>
+        </section>
+    
+        <!-- POP UP SECTION -->
+        <section class="pop-up">
+            <h4>To save your recipes,</h4>
+            <h4>Do you already <br>have a profile?</h4>
+    
+            <div class="actions">
+                <button>YES </button>
+                <button>NO</button>
+            </div>
+        </section>
+    
+        <section class="form">
+            <h4>SIGN UP</h4>
+            <i class="fas fa-times fa-2x close"></i>
+            <!--this h4 should be red-->
+            <form>
+                <input type="email" placeholder="Email">
+                <input type="username" placeholder="Username">
+                <input type="password" placeholder="Password">
+            </form>
+            <div class="actions">
+                <button>OK </button>
+            </div>
+    
+        </section>
+    
+    
+        <section class="form">
+            <h4>LOG IN</h4>
+            <i class="fas fa-times fa-2x close"></i>
+            <!--this h4 should be red-->
+            <form>
+                <input type="username" placeholder="Username">
+                <input type="password" placeholder="Password">
+            </form>
+            <h6>Forgot password?</h6>
+            <div class="actions">
+                <button>OK </button>
+            </div>
+    
+        </section>
+
 </body>
 </html>
