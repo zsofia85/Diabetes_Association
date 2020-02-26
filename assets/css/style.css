@@ -312,12 +312,22 @@ section:not(#disclaimer) {
 
 .recipe_banner {
     width: 100%;
+    position: relative;
+}
+
+.recipe_banner img {
+    display: block;
 }
 
 .recipe_banner i {
-    right: -95%;
-    top: 0%;
-    transform: translate(95%, 0);
+    position: absolute;
+    color: var(--light);
+    right: 3%;
+    top: 3%;
+    border: 1px solid white;
+    background-color: var(--white);
+    padding: 3vw;
+    border-radius: 50%;
 }
 
 .recipe_name {
@@ -329,12 +339,12 @@ section:not(#disclaimer) {
 .recipe_name h2 {
     color: var(--red);
     padding-right: 4vw;
+    margin-top: 3vh;
 }
 
 .recipe_name i {
-    padding-top: 1vh;
+    padding-top: 4vh;
 }
-
 
 .ingredients h2 {
     padding-left: 8vw;
@@ -346,6 +356,10 @@ section:not(#disclaimer) {
     flex-direction: column;
     text-align: left;
     padding:0 6vw 0 15vw;
+}
+
+.bullet_list {
+    list-style-type: circle;
 }
 
 .ingredients ul li {
