@@ -241,7 +241,14 @@ const responsivePage = document.getElementById('responsive');
 const individualRecipePage = document.getElementById('individualRecipe');
 const productCategoriesPage = document.getElementById('productCategories');
 const productsSubCategoriesPage = document.getElementById('productsSubCategories');
+const recipesPage = document.getElementsByClassName('recipes')[0];
+const accountPopup = document.getElementById('accountPopup');
+const signInPopup = document.getElementById('signInPopup');
+const signUpPopup = document.getElementById('signUpPopup');
 const searchField = document.getElementById('searchField');
+const saveRecipesIcons = document.getElementsByClassName('fa-heart');
+const closeIcons = document.getElementsByClassName('fa-times');
+const readMoreLinks = recipesPage.getElementsByTagName('a');
 
 function displayElements(elementsToShow, elementsToHide) {
     for (let e of elementsToShow) {
@@ -263,17 +270,33 @@ function removeBackgroundColor() {
     body.classList.remove('gray-background');
 }
 
+function changeNavItem(isProductPageActive) {
+    if (isProductPageActive) {
+        document.getElementById('products').classList.add('active');
+        document.getElementById('recipe').classList.remove('active');
+    } else {
+        document.getElementById('products').classList.remove('active');
+        document.getElementById('recipe').classList.add('active');
+    }
+}
+
 function openProductCategoryPage() {
-    displayElements([productCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage, productsSubCategoriesPage])
+    displayElements([productCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage, productsSubCategoriesPage, recipesPage, accountPopup, signInPopup, signUpPopup])
     renderProductCategories(productCategories);
     changeBackgroundToGray();
     searchField.value = '';
+    changeNavItem(true);
 }
 
 function openSubCategoryPage(productCategory) {
     displayElements([productsSubCategoriesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage, productCategoriesPage]);
     renderProductSubCategories(productCategory);
     removeBackgroundColor();
+}
+
+function openRecipesPage() {
+    displayElements([recipesPage, navigation], [disclaimerPage, responsivePage, individualRecipePage, productCategoriesPage, productsSubCategoriesPage, accountPopup, signInPopup, signInPopup]);
+    changeNavItem(false);
 }
 
 function renderProductCategories(productCategories) {
@@ -400,12 +423,35 @@ productsIcon.addEventListener('click', function() {
 });
 
 recipesIcon.addEventListener('click', function() {
-    
+    openRecipesPage();
 });
 
-// profileIcon.addEventListener('click', function() {
-    
-// })
+
+document.getElementById('goToSignIn').addEventListener('click', function() {
+    displayElements([signInPopup, navigation], [disclaimerPage, responsivePage, individualRecipePage, productCategoriesPage, productsSubCategoriesPage, recipesPage, accountPopup, signUpPopup]);
+});
+
+document.getElementById('goToSignUp').addEventListener('click', function() {
+    displayElements([signUpPopup, navigation], [disclaimerPage, responsivePage, individualRecipePage, productCategoriesPage, productsSubCategoriesPage, recipesPage, accountPopup, signInPopup]);
+});
+
+for (let icon of saveRecipesIcons) {
+    icon.addEventListener('click', function() {
+        displayElements([accountPopup, navigation], [disclaimerPage, responsivePage, individualRecipePage, productCategoriesPage, productsSubCategoriesPage, recipesPage, signInPopup, signInPopup]);
+    });
+}
+
+for (let link of readMoreLinks) {
+    link.addEventListener('click', function() {
+        displayElements([individualRecipePage, navigation], [disclaimerPage, responsivePage, productCategoriesPage, productsSubCategoriesPage, recipesPage]);
+    })
+}
+
+for (let icon of closeIcons) {
+    icon.addEventListener('click', function() {
+        displayElements([recipesPage], [signInPopup, signUpPopup]);
+    })
+}
 
 window.addEventListener('load', function() {
     if(window.innerWidth > 425) {
